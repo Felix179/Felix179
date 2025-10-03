@@ -1,0 +1,37 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    justify-items: center;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+th, td{
+    padding: 8px;
+    border: solid #ccc;
+}
+
+input{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+button{
+    padding: 10px;
+    border-radius: 10px ;
+}
