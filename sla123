@@ -1,0 +1,30 @@
+<?php 
+include'conexao.php';
+
+if($_SERVER["REQUEST_METHOD"] == "POST"){ 
+    $ID = $_POST['id'];
+    $nome = $_POST['nome'];
+    $email = $_POST['telefone'];
+    $idade = $_POST['idade'];
+
+    $sql = "UPDATE contato SET  nome='$nome', telefone='$telefone', idade='$idade' WHERE id='$id'";
+    $conn->query($sql);
+
+header("location:index.php");
+exit;
+} else {
+    $id = $_GET['id'];
+    $result = $conn->query("SELECT * FROM contatods WHERE id='$id'");
+    $row = $result->fetch_assoc();
+    ?>
+
+    <form action="editar.php" method="POST">
+        <input type="hidden" name="id" value="<?=$row['id']?>">
+        <input type="text" name="nome" value="<?=$row['nome']?>" require>
+        <input type="email" name="email" value="<?=$row['telefone']?>"require>
+        <input type="text" name="telefone" value="<?=$row['idade']?>"require>
+        <button type="submit">Salvar</button>
+    </form>
+
+<?php } ?>
+    
