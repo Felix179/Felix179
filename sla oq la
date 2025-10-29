@@ -1,0 +1,38 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import pandas as pd 
+import time 
+
+
+excel_path = 'usuario.xlsx'
+
+df = pd.read_excel(excel_path)
+
+df.columns = df.columns.str.strip().str.lower()
+print ("colunas encontradas:" , df.columns.tolist())
+
+driver = webdriver.Chrome()
+driver.get('http://127.0.0.1:5500/sla/index.html')
+
+time.sleep(2)
+
+for index, row in df. iterrows():
+
+    for index,row in df.iterrows():
+        driver.find_element(By . ID, 'nome'). clear()
+        driver.find_element(By . ID, 'nome'). send_keys(row['nome'])
+
+        driver.find_element(By . ID, 'telefone'). clear()
+        driver.find_element(By . ID, 'telefone'). send_keys(str (row['telefone']))
+
+        driver.find_element(By . ID, 'idade'). clear()
+        driver.find_element(By . ID, 'idade').send_keys(str (row['idade']))
+
+        driver.find_element(By.TAG_NAME, 'button').click()
+        time.sleep(1)
+
+driver. quit()
+
+
+
+
