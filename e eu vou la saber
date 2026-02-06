@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Barbearia</title>
+    <link rel="stylesheet" href="sla.css">
+</head>
+<body>
+    <header class="topo">~
+
+        <div class="texto">Barbearia</div>
+
+        <nav class="menu">
+        <button>Inicio</button>
+        <button>Serviço</button> 
+        <button>Agenda</button>
+        <button>Contato</button> 
+    </nav>
+    
+    </header>
+
+    <div class="container">
+
+        <div class="text">
+
+           <h2> Alcance o estilo dos seus sonhos Sua barbearia </h2>
+        </div>
+
+
+        <button class="botao">Agendamento</button>
+    </div>
+
+
+</body>
+</html>
